@@ -1,0 +1,606 @@
+Example 1: Infix expression: a
+Postfix expression: a
+Start state: 0, Final state: 1
+Transitions:
+State 0 --(a)--> State 1
+The NFA graph has been generated and saved as 'graphs/afn_graph_1.png'.
+
+--------------------------------------------------
+
+Example 2: Infix expression: b
+Postfix expression: b
+Start state: 0, Final state: 1
+Transitions:
+State 0 --(b)--> State 1
+The NFA graph has been generated and saved as 'graphs/afn_graph_2.png'.
+
+--------------------------------------------------
+
+Example 3: Infix expression: c
+Postfix expression: c
+Start state: 0, Final state: 1
+Transitions:
+State 0 --(c)--> State 1
+The NFA graph has been generated and saved as 'graphs/afn_graph_3.png'.
+
+--------------------------------------------------
+
+Example 4: Infix expression: ab
+Postfix expression: ab.
+Start state: 0, Final state: 3
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 1 --(λ)--> State 2
+The NFA graph has been generated and saved as 'graphs/afn_graph_4.png'.
+
+--------------------------------------------------
+
+Example 5: Infix expression: a|b
+Postfix expression: ab|
+Start state: 4, Final state: 5
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+The NFA graph has been generated and saved as 'graphs/afn_graph_5.png'.
+
+--------------------------------------------------
+
+Example 6: Infix expression: a.b
+Postfix expression: ab.
+Start state: 0, Final state: 3
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 1 --(λ)--> State 2
+The NFA graph has been generated and saved as 'graphs/afn_graph_6.png'.
+
+--------------------------------------------------
+
+Example 7: Infix expression: a*
+Postfix expression: a*
+Start state: 2, Final state: 3
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(λ)--> State 0
+State 1 --(λ)--> State 0
+State 1 --(λ)--> State 3
+State 2 --(λ)--> State 3
+The NFA graph has been generated and saved as 'graphs/afn_graph_7.png'.
+
+--------------------------------------------------
+
+Example 8: Infix expression: (a|b)*
+Postfix expression: ab|*
+Start state: 6, Final state: 7
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(λ)--> State 4
+State 5 --(λ)--> State 4
+State 5 --(λ)--> State 7
+State 6 --(λ)--> State 7
+The NFA graph has been generated and saved as 'graphs/afn_graph_8.png'.
+
+--------------------------------------------------
+
+Example 9: Infix expression: a.b|c
+Postfix expression: ab.c|
+Start state: 6, Final state: 7
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 1 --(λ)--> State 2
+State 4 --(c)--> State 5
+State 6 --(λ)--> State 0
+State 6 --(λ)--> State 4
+State 3 --(λ)--> State 7
+State 5 --(λ)--> State 7
+The NFA graph has been generated and saved as 'graphs/afn_graph_9.png'.
+
+--------------------------------------------------
+
+Example 10: Infix expression: a|(b.c)
+Postfix expression: abc.|
+Start state: 6, Final state: 7
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(c)--> State 5
+State 3 --(λ)--> State 4
+State 6 --(λ)--> State 0
+State 6 --(λ)--> State 2
+State 1 --(λ)--> State 7
+State 5 --(λ)--> State 7
+The NFA graph has been generated and saved as 'graphs/afn_graph_10.png'.
+
+--------------------------------------------------
+
+Example 11: Infix expression: a.b.c
+Postfix expression: ab.c.
+Start state: 0, Final state: 5
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 1 --(λ)--> State 2
+State 4 --(c)--> State 5
+State 3 --(λ)--> State 4
+The NFA graph has been generated and saved as 'graphs/afn_graph_11.png'.
+
+--------------------------------------------------
+
+Example 12: Infix expression: (a|b).c
+Postfix expression: ab|c.
+Start state: 4, Final state: 7
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(c)--> State 7
+State 5 --(λ)--> State 6
+The NFA graph has been generated and saved as 'graphs/afn_graph_12.png'.
+
+--------------------------------------------------
+
+Example 13: Infix expression: a.(b|c)*
+Postfix expression: abc|*.
+Start state: 0, Final state: 9
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(c)--> State 5
+State 6 --(λ)--> State 2
+State 6 --(λ)--> State 4
+State 3 --(λ)--> State 7
+State 5 --(λ)--> State 7
+State 8 --(λ)--> State 6
+State 7 --(λ)--> State 6
+State 7 --(λ)--> State 9
+State 8 --(λ)--> State 9
+State 1 --(λ)--> State 8
+The NFA graph has been generated and saved as 'graphs/afn_graph_13.png'.
+
+--------------------------------------------------
+
+Example 14: Infix expression: (a.b)|c
+Postfix expression: ab.c|
+Start state: 6, Final state: 7
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 1 --(λ)--> State 2
+State 4 --(c)--> State 5
+State 6 --(λ)--> State 0
+State 6 --(λ)--> State 4
+State 3 --(λ)--> State 7
+State 5 --(λ)--> State 7
+The NFA graph has been generated and saved as 'graphs/afn_graph_14.png'.
+
+--------------------------------------------------
+
+Example 15: Infix expression: (a|b).(c|d)*
+Postfix expression: ab|cd|*.
+Start state: 4, Final state: 13
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(c)--> State 7
+State 8 --(d)--> State 9
+State 10 --(λ)--> State 6
+State 10 --(λ)--> State 8
+State 7 --(λ)--> State 11
+State 9 --(λ)--> State 11
+State 12 --(λ)--> State 10
+State 11 --(λ)--> State 10
+State 11 --(λ)--> State 13
+State 12 --(λ)--> State 13
+State 5 --(λ)--> State 12
+The NFA graph has been generated and saved as 'graphs/afn_graph_15.png'.
+
+--------------------------------------------------
+
+Example 16: Infix expression: (a|b.c)*
+Postfix expression: abc.|*
+Start state: 8, Final state: 9
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(c)--> State 5
+State 3 --(λ)--> State 4
+State 6 --(λ)--> State 0
+State 6 --(λ)--> State 2
+State 1 --(λ)--> State 7
+State 5 --(λ)--> State 7
+State 8 --(λ)--> State 6
+State 7 --(λ)--> State 6
+State 7 --(λ)--> State 9
+State 8 --(λ)--> State 9
+The NFA graph has been generated and saved as 'graphs/afn_graph_16.png'.
+
+--------------------------------------------------
+
+Example 17: Infix expression: a.(b|c).d
+Postfix expression: abc|.d.
+Start state: 0, Final state: 9
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(c)--> State 5
+State 6 --(λ)--> State 2
+State 6 --(λ)--> State 4
+State 3 --(λ)--> State 7
+State 5 --(λ)--> State 7
+State 1 --(λ)--> State 6
+State 8 --(d)--> State 9
+State 7 --(λ)--> State 8
+The NFA graph has been generated and saved as 'graphs/afn_graph_17.png'.
+
+--------------------------------------------------
+
+Example 18: Infix expression: a|(b|(c.d))
+Postfix expression: abcd.||
+Start state: 10, Final state: 11
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(c)--> State 5
+State 6 --(d)--> State 7
+State 5 --(λ)--> State 6
+State 8 --(λ)--> State 2
+State 8 --(λ)--> State 4
+State 3 --(λ)--> State 9
+State 7 --(λ)--> State 9
+State 10 --(λ)--> State 0
+State 10 --(λ)--> State 8
+State 1 --(λ)--> State 11
+State 9 --(λ)--> State 11
+The NFA graph has been generated and saved as 'graphs/afn_graph_18.png'.
+
+--------------------------------------------------
+
+Example 19: Infix expression: (a.b)|(c.d)
+Postfix expression: ab.cd.|
+Start state: 8, Final state: 9
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 1 --(λ)--> State 2
+State 4 --(c)--> State 5
+State 6 --(d)--> State 7
+State 5 --(λ)--> State 6
+State 8 --(λ)--> State 0
+State 8 --(λ)--> State 4
+State 3 --(λ)--> State 9
+State 7 --(λ)--> State 9
+The NFA graph has been generated and saved as 'graphs/afn_graph_19.png'.
+
+--------------------------------------------------
+
+Example 20: Infix expression: ((a|b).c).d
+Postfix expression: ab|c.d.
+Start state: 4, Final state: 9
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(c)--> State 7
+State 5 --(λ)--> State 6
+State 8 --(d)--> State 9
+State 7 --(λ)--> State 8
+The NFA graph has been generated and saved as 'graphs/afn_graph_20.png'.
+
+--------------------------------------------------
+
+Example 21: Infix expression: a.(b.c|d.e)
+Postfix expression: abc.de.|.
+Start state: 0, Final state: 11
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(c)--> State 5
+State 3 --(λ)--> State 4
+State 6 --(d)--> State 7
+State 8 --(e)--> State 9
+State 7 --(λ)--> State 8
+State 10 --(λ)--> State 2
+State 10 --(λ)--> State 6
+State 5 --(λ)--> State 11
+State 9 --(λ)--> State 11
+State 1 --(λ)--> State 10
+The NFA graph has been generated and saved as 'graphs/afn_graph_21.png'.
+
+--------------------------------------------------
+
+Example 22: Infix expression: a|
+Error in expression: Expression ends with an operator: '|'.
+
+--------------------------------------------------
+
+Example 23: Infix expression: *a
+Error in expression: Operator '*' is missing a valid operand.
+
+--------------------------------------------------
+
+Example 24: Infix expression: (a|b
+Error in expression: Unmatched opening parenthesis.
+
+--------------------------------------------------
+
+Example 25: Infix expression: a(b|c))
+Error in expression: Unmatched closing parenthesis.
+
+--------------------------------------------------
+
+Example 26: Infix expression: |a
+Error in expression: Operator '|' is missing a valid left operand.
+
+--------------------------------------------------
+
+Example 27: Infix expression: a|b|
+Error in expression: Expression ends with an operator: '|'.
+
+--------------------------------------------------
+
+Example 28: Infix expression: a..b
+Error in expression: Operator '.' is missing a valid left operand.
+
+--------------------------------------------------
+
+Example 29: Infix expression: (a.b|(c|d.e)*).f
+Postfix expression: ab.cde.|*|f.
+Start state: 14, Final state: 17
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 1 --(λ)--> State 2
+State 4 --(c)--> State 5
+State 6 --(d)--> State 7
+State 8 --(e)--> State 9
+State 7 --(λ)--> State 8
+State 10 --(λ)--> State 4
+State 10 --(λ)--> State 6
+State 5 --(λ)--> State 11
+State 9 --(λ)--> State 11
+State 12 --(λ)--> State 10
+State 11 --(λ)--> State 10
+State 11 --(λ)--> State 13
+State 12 --(λ)--> State 13
+State 14 --(λ)--> State 0
+State 14 --(λ)--> State 12
+State 3 --(λ)--> State 15
+State 13 --(λ)--> State 15
+State 16 --(f)--> State 17
+State 15 --(λ)--> State 16
+The NFA graph has been generated and saved as 'graphs/afn_graph_29.png'.
+
+--------------------------------------------------
+
+Example 30: Infix expression: ((a|b)*.c)|d
+Postfix expression: ab|*c.d|
+Start state: 12, Final state: 13
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(λ)--> State 4
+State 5 --(λ)--> State 4
+State 5 --(λ)--> State 7
+State 6 --(λ)--> State 7
+State 8 --(c)--> State 9
+State 7 --(λ)--> State 8
+State 10 --(d)--> State 11
+State 12 --(λ)--> State 6
+State 12 --(λ)--> State 10
+State 9 --(λ)--> State 13
+State 11 --(λ)--> State 13
+The NFA graph has been generated and saved as 'graphs/afn_graph_30.png'.
+
+--------------------------------------------------
+
+Example 31: Infix expression: (a|b)*.c*
+Postfix expression: ab|*c*.
+Start state: 6, Final state: 11
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(λ)--> State 4
+State 5 --(λ)--> State 4
+State 5 --(λ)--> State 7
+State 6 --(λ)--> State 7
+State 8 --(c)--> State 9
+State 10 --(λ)--> State 8
+State 9 --(λ)--> State 8
+State 9 --(λ)--> State 11
+State 10 --(λ)--> State 11
+State 7 --(λ)--> State 10
+The NFA graph has been generated and saved as 'graphs/afn_graph_31.png'.
+
+--------------------------------------------------
+
+Example 32: Infix expression: (((a|b).c)*.d)|(e.f.g)
+Postfix expression: ab|c.*d.ef.g.|
+Start state: 18, Final state: 19
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(c)--> State 7
+State 5 --(λ)--> State 6
+State 8 --(λ)--> State 4
+State 7 --(λ)--> State 4
+State 7 --(λ)--> State 9
+State 8 --(λ)--> State 9
+State 10 --(d)--> State 11
+State 9 --(λ)--> State 10
+State 12 --(e)--> State 13
+State 14 --(f)--> State 15
+State 13 --(λ)--> State 14
+State 16 --(g)--> State 17
+State 15 --(λ)--> State 16
+State 18 --(λ)--> State 8
+State 18 --(λ)--> State 12
+State 11 --(λ)--> State 19
+State 17 --(λ)--> State 19
+The NFA graph has been generated and saved as 'graphs/afn_graph_32.png'.
+
+--------------------------------------------------
+
+Example 33: Infix expression: ((a|b)*.(c|d))|(e.f)
+Postfix expression: ab|*cd|.ef.|
+Start state: 18, Final state: 19
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 0
+State 4 --(λ)--> State 2
+State 1 --(λ)--> State 5
+State 3 --(λ)--> State 5
+State 6 --(λ)--> State 4
+State 5 --(λ)--> State 4
+State 5 --(λ)--> State 7
+State 6 --(λ)--> State 7
+State 8 --(c)--> State 9
+State 10 --(d)--> State 11
+State 12 --(λ)--> State 8
+State 12 --(λ)--> State 10
+State 9 --(λ)--> State 13
+State 11 --(λ)--> State 13
+State 7 --(λ)--> State 12
+State 14 --(e)--> State 15
+State 16 --(f)--> State 17
+State 15 --(λ)--> State 16
+State 18 --(λ)--> State 6
+State 18 --(λ)--> State 14
+State 13 --(λ)--> State 19
+State 17 --(λ)--> State 19
+The NFA graph has been generated and saved as 'graphs/afn_graph_33.png'.
+
+--------------------------------------------------
+
+Example 34: Infix expression: a|b*
+Postfix expression: ab*|
+Start state: 6, Final state: 7
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(λ)--> State 2
+State 3 --(λ)--> State 2
+State 3 --(λ)--> State 5
+State 4 --(λ)--> State 5
+State 6 --(λ)--> State 0
+State 6 --(λ)--> State 4
+State 1 --(λ)--> State 7
+State 5 --(λ)--> State 7
+The NFA graph has been generated and saved as 'graphs/afn_graph_34.png'.
+
+--------------------------------------------------
+
+Example 35: Infix expression: a(b|c)*
+Postfix expression: abc|*.
+Start state: 0, Final state: 9
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(c)--> State 5
+State 6 --(λ)--> State 2
+State 6 --(λ)--> State 4
+State 3 --(λ)--> State 7
+State 5 --(λ)--> State 7
+State 8 --(λ)--> State 6
+State 7 --(λ)--> State 6
+State 7 --(λ)--> State 9
+State 8 --(λ)--> State 9
+State 1 --(λ)--> State 8
+The NFA graph has been generated and saved as 'graphs/afn_graph_35.png'.
+
+--------------------------------------------------
+
+Example 36: Infix expression: ((a|b.b)*.(c|a.a)*|b.a).a
+Postfix expression: abb.|*caa.|*.ba.|a.
+Start state: 24, Final state: 27
+Transitions:
+State 0 --(a)--> State 1
+State 2 --(b)--> State 3
+State 4 --(b)--> State 5
+State 3 --(λ)--> State 4
+State 6 --(λ)--> State 0
+State 6 --(λ)--> State 2
+State 1 --(λ)--> State 7
+State 5 --(λ)--> State 7
+State 8 --(λ)--> State 6
+State 7 --(λ)--> State 6
+State 7 --(λ)--> State 9
+State 8 --(λ)--> State 9
+State 10 --(c)--> State 11
+State 12 --(a)--> State 13
+State 14 --(a)--> State 15
+State 13 --(λ)--> State 14
+State 16 --(λ)--> State 10
+State 16 --(λ)--> State 12
+State 11 --(λ)--> State 17
+State 15 --(λ)--> State 17
+State 18 --(λ)--> State 16
+State 17 --(λ)--> State 16
+State 17 --(λ)--> State 19
+State 18 --(λ)--> State 19
+State 9 --(λ)--> State 18
+State 20 --(b)--> State 21
+State 22 --(a)--> State 23
+State 21 --(λ)--> State 22
+State 24 --(λ)--> State 8
+State 24 --(λ)--> State 20
+State 19 --(λ)--> State 25
+State 23 --(λ)--> State 25
+State 26 --(a)--> State 27
+State 25 --(λ)--> State 26
+The NFA graph has been generated and saved as 'graphs/afn_graph_36.png'.
+
+--------------------------------------------------
+
+Example 37: Infix expression: ba*|c
+Postfix expression: ba*.c|
+Start state: 8, Final state: 9
+Transitions:
+State 0 --(b)--> State 1
+State 2 --(a)--> State 3
+State 4 --(λ)--> State 2
+State 3 --(λ)--> State 2
+State 3 --(λ)--> State 5
+State 4 --(λ)--> State 5
+State 1 --(λ)--> State 4
+State 6 --(c)--> State 7
+State 8 --(λ)--> State 0
+State 8 --(λ)--> State 6
+State 5 --(λ)--> State 9
+State 7 --(λ)--> State 9
+The NFA graph has been generated and saved as 'graphs/afn_graph_37.png'.
+
+--------------------------------------------------
